@@ -21,6 +21,14 @@
 }
 
 .header {
-  inline-size: var(--content-width);
   margin-inline: auto;
+  inline-size: var(--content-width);
+}
+
+.header__title {
+  font-size: var(--h1-size);
+}
+
+.header__subtitle {
+  font-size: var(--h2-size);
 }
