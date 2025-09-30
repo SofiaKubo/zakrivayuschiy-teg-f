@@ -11,6 +11,7 @@
 */
 
 .page {
+  color: var(--color-text, #000);
   font-family: var(--font-main);
   background-image: var(--page-bg);
   background-size: cover;
@@ -22,11 +23,21 @@
 
 .header {
   margin-inline: auto;
+  background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
 }
 
 .header__title {
   font-size: var(--h1-size);
+}
+
+.header__title,
+.header__subtitle {
+  font-family: var(--font-accent);
+  font-variation-settings: "wght" var(--font-weight-title);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .header__subtitle {
