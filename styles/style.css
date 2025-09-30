@@ -19,3 +19,8 @@
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-text);
 }
+
+.header {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+}
