@@ -1,14 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* ========== Fonts ========== */
   --font-main: "Inter-Variable", "Roboto", Arial, sans-serif;
   --font-accent: "PressStart2P-Regular", monospace;
-
-  --color-text: #000;
-  --color-bg: #fff;
 
   --font-weight-text: 410;
   --font-weight-title: 715;
 
+  /* ========== Colors ========== */
+  --color-text: #000;
+  --color-bg: #fff;
+
+  /* ========== Backgrounds ========== */
   --page-bg: repeating-linear-gradient(
       to right,
       #d3d3d3 0 2px,
@@ -17,8 +20,16 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
+  /* ========== Layout ========== */
   --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  --section-margin-block: 6.25rem;
 
+  /* ========== Typography sizes ========== */
   --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   --h2-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+
+  /* ========== Header ========== */
+  --header-padding-block-start: clamp(7.625rem, 0.751vw + 7.449rem, 8.125rem);
+  --header-padding-block-end: clamp(9.75rem, 1.5vw + 8.3rem, 10.8125rem);
+  --header-gap: 20px;
 }
