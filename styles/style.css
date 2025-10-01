@@ -12,7 +12,7 @@
 
 .page {
   color: var(--color-accent, #000);
-  font-family: var(--font-main);
+  font-family: var(--font-main, "Inter"), sans-serif;
   background-image: var(--page-bg);
   background-size: cover;
   background-attachment: fixed;
@@ -41,7 +41,7 @@
 
 .header__title,
 .header__subtitle {
-  font-family: var(--font-accent);
+  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
   font-weight: 400;
   line-height: 1;
   text-align: center;
@@ -72,15 +72,17 @@
   display: flex;
   flex-direction: column;
   border: 2px solid var(--color-accent, #000);
-  inline-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+  inline-size: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
 }
 
 .card__title {
-  font-family: var(--font-main);
-  font-weight: var(--font-weight-title, 715);
+  font-family: var(--font-main, "Inter"), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-title);
+  font-weight: 715;
   font-size: 18px;
-  font-style: bold;
+  font-style: normal;
   line-height: 1;
+  letter-spacing: normal;
 }
 
 .card__image {
@@ -115,7 +117,7 @@
 }
 
 .button__text {
-  font-family: var(--font-accent);
+  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
   font-weight: 400;
   font-size: 14px;
   line-height: 0.9;
