@@ -1,15 +1,52 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
 :root {
-  /* ========== Fonts ========== */
+  /* ========== Core / Theme ========== */
+  --color-bg: #fff;
+  --color-accent: #000;
+
+  --border-width: 2px;
+  --border-color: var(--color-accent);
+
+  /* ========== Typography: Fonts & Weights ========== */
   --font-main: "Inter-Variable", "Roboto", Arial, sans-serif;
   --font-accent: "PressStart2P-Regular", monospace;
 
   --font-weight-text: 410;
   --font-weight-title: 715;
 
-  /* ========== Colors ========== */
-  --color-accent: #000;
-  --color-bg: #fff;
+  /* ========== Typography: Sizes ========== */
+  --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
+  --h2-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
+
+  --text-size: 18px;
+  --text-line-height: 1.17;
+  --title-size: 18px;
+  --title-line-height: 1;
+
+  /* ========== Layout: Containers & Spacing ========== */
+  --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+  --card-width: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
+
+  --section-margin-block: 6.25rem;
+
+  --section-gap: 50px;
+  --card-gap: 25px;
+
+  --page-padding-inline: clamp(0rem, 34.742vw - 8.143rem, 23.125rem);
+  --card-padding-inline: 25px;
+  --card-padding-block: 25px;
+  --card-padding: var(--card-padding-block) var(--card-padding-inline);
+
+  /* ========== Components: Header ========== */
+  --header-gap: 20px;
+  --header-padding-block: clamp(7.625rem, 0.751vw + 7.449rem, 8.125rem);
+
+  /* ========== Components: Footer ========== */
+  --footer-button-gap: 8px;
+  --footer-button-padding-block: clamp(1.063rem, 0.282vw + 0.996rem, 1.25rem);
+  --footer-text-size: 14px;
+  --footer-text-line-height: 0.9;
 
   /* ========== Backgrounds ========== */
   --page-bg: repeating-linear-gradient(
@@ -19,22 +56,4 @@
     ),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-
-  /* ========== Layout ========== */
-  --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
-  --section-margin-block: 6.25rem;
-  --section-gap: 50px;
-  --card-width: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
-  --card-gap: 25px;
-  --page-padding-inline: clamp(0rem, 34.742vw - 8.143rem, 23.125rem);
-  --card-padding: 25px;
-
-  /* ========== Typography sizes ========== */
-  --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
-  --h2-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
-
-  /* ========== Header ========== */
-  --header-padding-block-start: clamp(7.625rem, 0.751vw + 7.449rem, 8.125rem);
-  --header-padding-block-end: clamp(9.75rem, 1.5vw + 8.3rem, 10.8125rem);
-  --header-gap: 20px;
 }
