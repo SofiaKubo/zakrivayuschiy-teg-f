@@ -8,7 +8,7 @@
   --font-weight-title: 715;
 
   /* ========== Colors ========== */
-  --color-text: #000;
+  --color-accent: #000;
   --color-bg: #fff;
 
   /* ========== Backgrounds ========== */
@@ -23,6 +23,7 @@
   /* ========== Layout ========== */
   --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   --section-margin-block: 6.25rem;
+  --section-gap: 50px;
 
   /* ========== Typography sizes ========== */
   --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);

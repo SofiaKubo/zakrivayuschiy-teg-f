@@ -11,7 +11,7 @@
 */
 
 .page {
-  color: var(--color-text, #000);
+  color: var(--color-accent, #000);
   font-family: var(--font-main);
   background-image: var(--page-bg);
   background-size: cover;
@@ -32,6 +32,7 @@
     var(--header-padding-block-end);
   background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
+  border: 2px solid var(--color-accent, #000);
 }
 
 .header__title {
@@ -51,12 +52,48 @@
   font-size: var(--h2-size);
 }
 
+.main {
+  background-color: var(--color-bg, #fff);
+}
+
+.content-section {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap, 50px);
+  padding-inline: 0;
+  padding-block: 0 50px;
+  background-color: var(--color-bg, #fff);
+}
+
+.card {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--color-accent, #000);
+  inline-size: clamp(23.438rem, 30.141vw + 16.373rem, 43.5rem);
+}
+
+.card__title {
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-title, 715);
+  font-size: 18px;
+  font-style: bold;
+  line-height: 1;
+}
+
+.card__image {
+  border-block: 2px solid var(--color-accent, #000);
+  border-inline: 0;
+}
+
 .footer {
   display: flex;
   justify-content: center;
-  margin: var(--section-margin-block) auto;
-  background-color: var(--color-bg);
   inline-size: var(--content-width);
+  background-color: var(--color-bg, #fff);
+  padding-block-end: var(--section-margin-block);
 }
 
 .footer__save-button {
@@ -64,7 +101,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  border: 2px solid #000;
+  border: 2px solid var(--color-accent, #000);
   padding-inline: 20px;
   padding-block: clamp(1.063rem, 0.282vw + 0.996rem, 1.25rem);
   background: transparent;
