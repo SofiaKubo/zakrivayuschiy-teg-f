@@ -24,6 +24,10 @@
   --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
   --section-margin-block: 6.25rem;
   --section-gap: 50px;
+  --card-width: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
+  --card-gap: 25px;
+  --page-padding-inline: clamp(0rem, 34.742vw - 8.143rem, 23.125rem);
+  --card-padding: 25px;
 
   /* ========== Typography sizes ========== */
   --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);

@@ -19,6 +19,7 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-text);
+  padding-inline: var(--card-padding-inline);
 }
 
 .header {
@@ -28,11 +29,11 @@
   gap: var(--header-gap, 20px);
   margin-inline: auto;
   margin-block: var(--section-margin-block);
+  border: 2px solid var(--color-accent, #000);
   padding-block: var(--header-padding-block-start)
     var(--header-padding-block-end);
   background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
-  border: 2px solid var(--color-accent, #000);
 }
 
 .header__title {
@@ -57,45 +58,66 @@
 }
 
 .content-section {
-  inline-size: var(--content-width);
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: var(--section-gap, 50px);
+  margin-inline: auto;
   padding-inline: 0;
   padding-block: 0 50px;
   background-color: var(--color-bg, #fff);
+  inline-size: var(--content-width);
 }
 
 .card {
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
   border: 2px solid var(--color-accent, #000);
-  inline-size: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
+  inline-size: var(--card-width);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap, 25px);
+  margin-inline: auto;
+  padding: var(--card-padding, 25px);
 }
 
 .card__title {
   font-family: var(--font-main, "Inter"), sans-serif;
-  font-variation-settings: "wght" var(--font-weight-title);
-  font-weight: 715;
+  font-weight: var(--font-weight-title, 715);
   font-size: 18px;
   font-style: normal;
   line-height: 1;
   letter-spacing: normal;
+  font-variation-settings: "wght" var(--font-weight-title);
+  padding: 4px 10px;
+}
+
+.card__text {
+  font-family: var(--font-main, "Inter"), sans-serif;
+  font-weight: var(--font-weight-text, 410);
+  font-variation-settings: "wght" var(--font-weight-text);
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: normal;
 }
 
 .card__image {
-  border-block: 2px solid var(--color-accent, #000);
   border-inline: 0;
+  border-block: 2px solid var(--color-accent, #000);
+  display: block;
+  width: 100%;
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  inline-size: var(--content-width);
-  background-color: var(--color-bg, #fff);
   padding-block-end: var(--section-margin-block);
+  background-color: var(--color-bg, #fff);
+  inline-size: var(--content-width);
 }
 
 .footer__save-button {
