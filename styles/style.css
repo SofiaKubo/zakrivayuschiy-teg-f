@@ -240,6 +240,10 @@
   line-height: var(--footer-text-line-height, 0.9);
 }
 
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
 .save-dialog {
   display: none;
   border: var(--border-width, 2px) solid var(--border-color, #000);
@@ -249,7 +253,7 @@
   position: fixed;
   inset: 0;
   margin: auto;
-  max-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
+  min-inline-size: clamp(21.313rem, 1.127vw + 21.048rem, 22.063rem);
 }
 
 .save-dialog[open] {
