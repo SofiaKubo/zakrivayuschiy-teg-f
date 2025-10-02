@@ -400,6 +400,8 @@
         type="button"
         class="footer__save-button"
         aria-label="Сохранить на память"
+        aria-controls="save-dialog"
+        onclick="window['save-dialog'].showModal();"
       >
         <svg class="footer__icon" viewBox="0 0 29 28" aria-hidden="true">
           <use href="./svg/floppy-sprite.svg#floppy_symbol"></use>
@@ -407,6 +409,28 @@
         <span class="button__text">Сохранить&nbsp;на&nbsp;память</span>
       </button>
     </footer>
+    <dialog
+      id="save-dialog"
+      class="save-dialog"
+      aria-labelledby="save-dialog-title"
+    >
+      <div class="save-dialog__content">
+        <svg class="save-dialog__icon" viewBox="0 0 29 28" aria-hidden="true">
+          <use href="./svg/floppy-sprite.svg#floppy_symbol"></use>
+        </svg>
+        <p id="save-dialog-title" class="save-dialog__text">
+          Вставьте<br />
+          дискету,&nbsp;чтобы<br />
+          продолжить
+        </p>
+
+        <form method="dialog" class="save-dialog__actions">
+          <button type="submit" class="card__like-button" value="ok" autofocus>
+            <span class="button__text">OK</span>
+          </button>
+        </form>
+      </div>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
