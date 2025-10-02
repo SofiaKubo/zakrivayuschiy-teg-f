@@ -41,6 +41,11 @@
   --card-padding-block: 25px;
   --card-padding: var(--card-padding-block) var(--card-padding-inline);
 
+  --actions-height: 38px;
+  --actions-width: 169px;
+  --actions-gap: 12px;
+  --like-button-width: 130px;
+
   /* ========== Components: Header ========== */
   --header-gap: 20px;
   --header-padding-block-start: clamp(7.563rem, 0.845vw + 7.364rem, 8.125rem);
