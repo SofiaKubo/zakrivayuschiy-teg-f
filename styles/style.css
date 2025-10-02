@@ -80,7 +80,6 @@
 
 .card__title,
 .card__subtitle {
-  padding: 4px 10px;
   font-family: var(--font-main, "Inter"), sans-serif;
   font-weight: var(--font-weight-title, 715);
   font-size: var(--title-size, 18px);
@@ -88,6 +87,16 @@
   line-height: var(--title-line-height, 1);
   letter-spacing: 0;
   font-variation-settings: "wght" var(--font-weight-title);
+  margin: 0;
+}
+
+.card__title {
+  padding: 6px 10px 0;
+}
+
+.card__subtitle {
+  padding: 0 10px 6px;
+  margin-top: 4px;
 }
 
 .card__image-wrapper {
