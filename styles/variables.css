@@ -15,6 +15,9 @@
   --font-weight-text: 410;
   --font-weight-title: 715;
 
+  --label-stroke-color: rgb(255 255 255 / 0.5);
+  --label-text-color: var(--color-accent);
+
   /* ========== Typography: Sizes ========== */
   --h1-size: clamp(3.063rem, 1.502vw + 2.71rem, 4.063rem);
   --h2-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
@@ -26,9 +29,9 @@
 
   /* ========== Layout: Containers & Spacing ========== */
   --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
-  --card-width: clamp(23.188rem, 30.516vw + 16.035rem, 43.5rem);
+  --card-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
 
-  --section-margin-block: 6.25rem;
+  --section-margin-block: 99px;
 
   --section-gap: 50px;
   --card-gap: 25px;
@@ -40,7 +43,8 @@
 
   /* ========== Components: Header ========== */
   --header-gap: 20px;
-  --header-padding-block: clamp(7.625rem, 0.751vw + 7.449rem, 8.125rem);
+  --header-padding-block-start: clamp(7.563rem, 0.845vw + 7.364rem, 8.125rem);
+  --header-padding-block-end: clamp(7.563rem, 0.845vw + 7.364rem, 8.125rem);
 
   /* ========== Components: Footer ========== */
   --footer-button-gap: 8px;

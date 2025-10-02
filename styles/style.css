@@ -30,7 +30,8 @@
   margin-inline: auto;
   margin-block: var(--section-margin-block);
   border: var(--border-width, 2px) solid var(--border-color, #000);
-  padding-block: var(--header-padding-block);
+  padding-block: var(--header-padding-block-start)
+    var(--header-padding-block-end);
   background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
 }
@@ -46,6 +47,8 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: normal;
 }
 
 .header__subtitle {
@@ -75,23 +78,59 @@
   inline-size: var(--card-width);
 }
 
-.card__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--card-gap, 25px);
-  margin-inline: auto;
-  padding: var(--card-padding);
-}
-
-.card__title {
+.card__title,
+.card__subtitle {
   padding: 4px 10px;
   font-family: var(--font-main, "Inter"), sans-serif;
   font-weight: var(--font-weight-title, 715);
   font-size: var(--title-size, 18px);
   font-style: normal;
   line-height: var(--title-line-height, 1);
-  letter-spacing: normal;
+  letter-spacing: 0;
   font-variation-settings: "wght" var(--font-weight-title);
+}
+
+.card__image-wrapper {
+  position: relative;
+  isolation: isolate;
+}
+
+.card__label {
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  right: 25px;
+  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
+  font-weight: 400;
+  font-size: var(--footer-text-size, 14px);
+  font-style: normal;
+  line-height: var(--title-line-height, 1);
+  letter-spacing: normal;
+  text-transform: uppercase;
+  color: var(--label-text-color, #000);
+  mix-blend-mode: hard-light;
+
+  text-shadow: -1px 0 var(--label-stroke-color, rgb(255 255 255 / 0.5)),
+    0 1px var(--label-stroke-color, rgb(255 255 255 / 0.5)),
+    1px 0 var(--label-stroke-color, rgb(255 255 255 / 0.5)),
+    0 -1px var(--label-stroke-color, rgb(255 255 255 / 0.5));
+}
+
+@supports (
+  -webkit-text-stroke: 1px var(--label-stroke-color, rgb(255 255 255 / 0.5))
+) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--label-stroke-color, rgb(255 255 255 / 0.5));
+    text-shadow: none;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap, 25px);
+  margin-inline: auto;
+  padding: var(--card-padding);
 }
 
 .card__text {
@@ -106,7 +145,8 @@
 
 .card__image {
   display: block;
-  width: 100%;
+  inline-size: 100%;
+  block-size: auto;
   border-inline: 0;
   border-block: var(--border-width, 2px) solid var(--border-color, #000);
 }
