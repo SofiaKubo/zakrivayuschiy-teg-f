@@ -83,7 +83,6 @@
 
 .card__title {
   margin: 0;
-  margin: 0;
   padding: 4px 10px;
   font-family: var(--font-main, "Inter"), sans-serif;
   font-weight: var(--font-weight-title, 715);
@@ -307,20 +306,13 @@ html:has(dialog[open]) {
 @media (width > 375px) {
   .card__title {
     padding: 4px 10px;
+    line-height: 22px;
     white-space: nowrap;
   }
+
   .br-switch::before {
     content: "\00A0";
     white-space: normal;
-  }
-
-  .card__title {
-    padding-right: 0;
-    padding-left: 10px;
-  }
-  .card__subtitle {
-    padding-right: 10px;
-    padding-left: 0;
   }
 
   .footer__save-button {

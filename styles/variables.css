@@ -20,9 +20,9 @@
   --h2-size: clamp(0.875rem, 0.845vw + 0.677rem, 1.438rem);
 
   --text-size: 18px;
-  --text-line-height: 1.17;
+  --text-line-height: 21px;
   --title-size: 18px;
-  --title-line-height: 1;
+  --title-line-height: 22px;
 
   /* — Layout: containers & spacing */
   --content-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
