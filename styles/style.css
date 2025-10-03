@@ -319,7 +319,7 @@ html:has(dialog[open]) {
     flex-direction: row;
     align-items: baseline;
     gap: 4px;
-    padding-block: 6px;
+    padding-block: 4px;
   }
 
   .card__title,
