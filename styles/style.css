@@ -15,9 +15,9 @@
   color: var(--color-accent, #000);
   font-family: var(--font-main, "Inter"), sans-serif;
   background-image: var(--page-bg);
+  background-repeat: repeat, repeat, no-repeat;
   background-size: cover, cover, cover;
   background-attachment: fixed, fixed, fixed;
-  background-repeat: repeat, repeat, no-repeat;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-text);
@@ -77,8 +77,8 @@
   flex-direction: column;
   margin-inline: auto;
   border: var(--border-width, 2px) solid var(--border-color, #000);
-  inline-size: var(--card-width);
   background-color: var(--color-bg, #fff);
+  inline-size: var(--card-width);
 }
 
 .card__title,
@@ -213,6 +213,7 @@
 .footer {
   display: flex;
   justify-content: center;
+  margin-inline: auto;
   padding-block-end: var(--section-margin-block);
   inline-size: var(--content-width);
 }
@@ -226,8 +227,8 @@
   padding-inline: 20px;
   padding-block: var(--footer-button-padding-block);
   background: transparent;
-  cursor: pointer;
   background-color: var(--color-bg, #fff);
+  cursor: pointer;
 }
 
 .footer__icon {
