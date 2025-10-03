@@ -300,5 +300,21 @@ html:has(dialog[open]) {
 }
 
 .save-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+@media (width > 375px) {
+  .footer__save-button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    block-size: 55px;
+  }
+
+  .footer__icon {
+    inline-size: 21px;
+    block-size: 21px;
+  }
 }
