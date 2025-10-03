@@ -81,6 +81,14 @@
   inline-size: var(--card-width);
 }
 
+.card__heading {
+  display: flex;
+  flex-direction: column;
+  padding-block: 6px;
+  /* gap: 4px; */
+  background-color: var(--color-bg, #fff);
+}
+
 .card__title,
 .card__subtitle {
   margin: 0;
@@ -94,12 +102,11 @@
 }
 
 .card__title {
-  padding: 6px 10px 0;
+  padding: 0 10px 0 10px;
 }
 
 .card__subtitle {
-  margin-top: 4px;
-  padding: 0 10px 6px;
+  padding: 4px 10px 0 10px;
 }
 
 .card__image-wrapper {
@@ -308,6 +315,29 @@ html:has(dialog[open]) {
 }
 
 @media (width > 375px) {
+  .card__heading {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 4px;
+    padding-block: 6px;
+  }
+
+  .card__title,
+  .card__subtitle {
+    padding-top: 0;
+    padding-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .card__title {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  .card__subtitle {
+    padding-right: 10px;
+    padding-left: 0;
+  }
+
   .footer__save-button {
     flex-direction: row;
     justify-content: center;
