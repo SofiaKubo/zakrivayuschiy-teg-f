@@ -15,11 +15,18 @@
   color: var(--color-accent, #000);
   font-family: var(--font-main, "Inter"), sans-serif;
   background-image: var(--page-bg);
-  background-size: cover;
-  background-attachment: fixed;
+  background-size: cover, cover, cover;
+  background-attachment: fixed, fixed, fixed;
+  background-repeat: repeat, repeat, no-repeat;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--font-weight-text);
+}
+
+.main,
+.content-section,
+.footer {
+  background: transparent;
 }
 
 .header {
@@ -55,10 +62,6 @@
   font-size: var(--h2-size);
 }
 
-.main {
-  background-color: var(--color-bg, #fff);
-}
-
 .content-section {
   display: flex;
   flex-direction: column;
@@ -66,7 +69,6 @@
   margin-inline: auto;
   padding-inline: 0;
   padding-block: 0 50px;
-  background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
 }
 
@@ -76,6 +78,7 @@
   margin-inline: auto;
   border: var(--border-width, 2px) solid var(--border-color, #000);
   inline-size: var(--card-width);
+  background-color: var(--color-bg, #fff);
 }
 
 .card__title,
@@ -211,7 +214,6 @@
   display: flex;
   justify-content: center;
   padding-block-end: var(--section-margin-block);
-  background-color: var(--color-bg, #fff);
   inline-size: var(--content-width);
 }
 
@@ -225,6 +227,7 @@
   padding-block: var(--footer-button-padding-block);
   background: transparent;
   cursor: pointer;
+  background-color: var(--color-bg, #fff);
 }
 
 .footer__icon {
