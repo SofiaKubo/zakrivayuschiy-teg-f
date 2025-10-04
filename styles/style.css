@@ -138,6 +138,11 @@
   filter: blur(20px) brightness(1.2);
 }
 
+.filter-sepia-red {
+  filter: sepia(0.4) hue-rotate(90deg) saturate(2.1) contrast(0.6) blur(2.1px)
+    brightness(1.1);
+}
+
 .card__label {
   position: absolute;
   top: 25px;
