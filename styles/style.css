@@ -113,6 +113,10 @@
   aspect-ratio: 1 / 1;
 }
 
+.filter-grayscale-contrast {
+  filter: grayscale(0.6) brightness(0.96) contrast(1.06);
+}
+
 .card__label {
   position: absolute;
   top: 25px;
