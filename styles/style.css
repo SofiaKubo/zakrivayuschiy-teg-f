@@ -122,6 +122,10 @@
     blur(1.1px);
 }
 
+.filter-sepia-warm {
+  filter: sepia(0.1) saturate(1.3) hue-rotate(30deg) contrast(1.1);
+}
+
 .card__label {
   position: absolute;
   top: 25px;
