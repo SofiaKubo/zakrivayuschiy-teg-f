@@ -113,6 +113,36 @@
   aspect-ratio: 1 / 1;
 }
 
+.filter-grayscale-contrast {
+  filter: grayscale(0.7) brightness(1.4);
+}
+
+.filter-hue-magenta-saturate {
+  filter: hue-rotate(359deg) saturate(2.9) brightness(1.4) contrast(1.2)
+    blur(1.1px);
+}
+
+.filter-sepia-warm {
+  filter: sepia(0.1) saturate(1.3) hue-rotate(30deg) contrast(1.1);
+}
+
+.filter-hue-green-bright {
+  filter: hue-rotate(4deg) brightness(1.3) invert(1.2) contrast(0.5) blur(0.6px);
+}
+
+.filter-hue-sepia-dark {
+  filter: sepia(1.3) saturate(1.4) hue-rotate(336deg) contrast(1.1);
+}
+
+.filter-blur-soft {
+  filter: blur(20px) brightness(1.2);
+}
+
+.filter-sepia-red {
+  filter: sepia(0.4) hue-rotate(90deg) saturate(2.1) contrast(0.6) blur(2.1px)
+    brightness(1.1);
+}
+
 .card__label {
   position: absolute;
   top: 25px;
