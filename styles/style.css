@@ -114,7 +114,12 @@
 }
 
 .filter-grayscale-contrast {
-  filter: grayscale(0.6) brightness(0.96) contrast(1.06);
+  filter: grayscale(0.7) brightness(1.4);
+}
+
+.filter-hue-magenta-saturate {
+  filter: hue-rotate(359deg) saturate(2.9) brightness(1.4) contrast(1.2)
+    blur(1.1px);
 }
 
 .card__label {
