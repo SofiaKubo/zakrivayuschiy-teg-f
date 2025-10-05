@@ -366,6 +366,14 @@ html:has(dialog[open]) {
   transform: translateX(0);
 }
 
+.button__text,
+.footer__icon {
+  position: relative;
+  z-index: 1;
+  color: var(--color-bg, #fff);
+  mix-blend-mode: difference;
+}
+
 @media (width > 375px) {
   .card__title {
     padding: 4px 10px;
