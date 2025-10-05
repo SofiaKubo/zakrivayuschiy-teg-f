@@ -330,7 +330,17 @@ html:has(dialog[open]) {
 }
 
 .save-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.card__like-button:focus,
+.footer__save-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible,
+.footer__save-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--color-accent, #000);
 }
 
 @media (width > 375px) {
