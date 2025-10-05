@@ -235,6 +235,11 @@
   block-size: var(--actions-height, 38px);
 }
 
+.card__icon-button:hover::before,
+.card__icon-button:focus-visible::before {
+  transform: translateX(0);
+}
+
 .card__icon-button:focus {
   outline: none;
 }
@@ -312,7 +317,9 @@
 }
 
 .card__like-button:hover::before,
-.footer__save-button:hover::before {
+.footer__save-button:hover::before,
+.card__like-button:focus-visible::before,
+.footer__save-button:focus-visible::before {
   transform: translateX(0);
 }
 
@@ -416,6 +423,13 @@ html:has(dialog[open]) {
 }
 
 /* ===== Media ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .card__like-button::before,
+  .footer__save-button::before {
+    transition: none;
+  }
+}
 
 @media (width > 375px) {
   .card__title {
