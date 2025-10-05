@@ -5,6 +5,9 @@
   --color-bg: #fff;
   --color-accent: #000;
 
+  --contour-color: var(--color-accent);
+  --animation-fill-color: #ff0000;
+
   --border-width: 2px;
   --border-color: var(--color-accent);
 

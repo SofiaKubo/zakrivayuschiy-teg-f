@@ -251,8 +251,19 @@
   block-size: 24px;
 }
 
-.like-icon path {
-  fill: var(--color-accent, #000);
+.like-icon .contour {
+  fill: var(--contour-color, #000);
+}
+.like-icon .main-body {
+  fill: transparent;
+}
+.like-icon .core {
+  fill: transparent;
+}
+.like-icon .sparks {
+  opacity: 0;
+  fill: var(--animation-fill-color, #ff0000);
+  transition: opacity 0.2s ease;
 }
 
 /* === Like / Save / OK buttons === */
