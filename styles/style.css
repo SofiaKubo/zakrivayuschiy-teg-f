@@ -343,6 +343,11 @@ html:has(dialog[open]) {
   box-shadow: 2px 2px 0 0 var(--color-accent, #000);
 }
 
+.card__like-button,
+.footer__save-button {
+  transition: box-shadow 0.3s ease;
+}
+
 @media (width > 375px) {
   .card__title {
     padding: 4px 10px;
