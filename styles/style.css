@@ -371,6 +371,7 @@ html:has(dialog[open]) {
   position: relative;
   z-index: 1;
   color: var(--color-bg, #fff);
+  fill: currentColor;
   mix-blend-mode: difference;
 }
 
