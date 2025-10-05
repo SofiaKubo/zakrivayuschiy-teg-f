@@ -355,6 +355,7 @@ html:has(dialog[open]) {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: var(--color-accent, #000);
   transition: transform 0.5s ease-in-out;
   transform: translateX(-100%);
