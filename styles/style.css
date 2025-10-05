@@ -9,6 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
 .page {
   padding-inline: var(--page-padding-inline);
   color: var(--color-accent, #000);
@@ -207,12 +208,12 @@
   box-sizing: border-box;
   border: 2px solid transparent;
   padding: 0;
+  line-height: 0;
   background: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
   inline-size: var(--actions-height, 38px);
   block-size: var(--actions-height, 38px);
-  line-height: 0;
 }
 
 .card__icon-button:focus {
@@ -220,6 +221,16 @@
 }
 .card__icon-button:focus-visible {
   border-color: var(--color-accent, #000);
+}
+
+.like-icon {
+  display: block;
+  inline-size: 27px;
+  block-size: 24px;
+}
+
+.like-icon path {
+  fill: var(--color-accent, #000);
 }
 
 .card__like-button {
@@ -233,16 +244,6 @@
   inline-size: var(--like-button-width, 130px);
   block-size: var(--actions-height, 38px);
   white-space: nowrap;
-}
-
-.like-icon {
-  display: block;
-  inline-size: 27px;
-  block-size: 24px;
-}
-
-.like-icon path {
-  fill: var(--color-accent, #000);
 }
 
 .footer {
@@ -272,11 +273,56 @@
   block-size: 28px;
 }
 
+.card__like-button,
+.footer__save-button {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus,
+.footer__save-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible,
+.footer__save-button:focus-visible {
+  box-shadow: 2px 2px 0 0 var(--color-accent, #000);
+}
+
+.card__like-button::before,
+.footer__save-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: var(--color-accent, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.card__like-button:hover::before,
+.footer__save-button:hover::before {
+  transform: translateX(0);
+}
+
 .button__text {
   font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
   font-weight: 400;
   font-size: var(--footer-text-size, 14px);
   line-height: var(--footer-text-line-height, 0.9);
+}
+
+.button__text,
+.footer__icon {
+  position: relative;
+  z-index: 1;
+  color: var(--color-bg, #fff);
+  mix-blend-mode: difference;
+}
+
+.footer__icon {
+  fill: currentColor;
 }
 
 html:has(dialog[open]) {
@@ -340,48 +386,6 @@ html:has(dialog[open]) {
 
 .save-dialog::backdrop {
   background: rgba(0, 0, 0, 0.85);
-}
-
-.card__like-button:focus,
-.footer__save-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible,
-.footer__save-button:focus-visible {
-  box-shadow: 2px 2px 0 0 var(--color-accent, #000);
-}
-
-.card__like-button,
-.footer__save-button {
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-}
-
-.card__like-button::before,
-.footer__save-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: var(--color-accent, #000);
-  transition: transform 0.5s ease-in-out;
-  transform: translateX(-100%);
-}
-
-.card__like-button:hover::before,
-.footer__save-button:hover::before {
-  transform: translateX(0);
-}
-
-.button__text,
-.footer__icon {
-  position: relative;
-  z-index: 1;
-  color: var(--color-bg, #fff);
-  fill: currentColor;
-  mix-blend-mode: difference;
 }
 
 @media (width > 375px) {
