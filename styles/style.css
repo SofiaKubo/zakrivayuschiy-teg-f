@@ -235,11 +235,6 @@
   block-size: var(--actions-height, 38px);
 }
 
-.card__icon-button:hover::before,
-.card__icon-button:focus-visible::before {
-  transform: translateX(0);
-}
-
 .card__icon-button:focus {
   outline: none;
 }
