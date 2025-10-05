@@ -346,6 +346,8 @@ html:has(dialog[open]) {
 .card__like-button,
 .footer__save-button {
   transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (width > 375px) {
