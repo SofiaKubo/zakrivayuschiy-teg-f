@@ -345,9 +345,24 @@ html:has(dialog[open]) {
 
 .card__like-button,
 .footer__save-button {
-  transition: box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button::before,
+.footer__save-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent, #000);
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%);
+}
+
+.card__like-button:hover::before,
+.footer__save-button:hover::before {
+  transform: translateX(0);
 }
 
 @media (width > 375px) {
