@@ -52,7 +52,6 @@
   --label-stroke-color: rgb(255 255 255 / 0.5);
 
   /* — Card: actions row (heart + Like button) */
-  --actions-width: 169px;
   --actions-height: 38px;
   --actions-gap: 0px;
 

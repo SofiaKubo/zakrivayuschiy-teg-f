@@ -212,9 +212,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: var(--actions-gap, 0);
-  margin-inline-start: auto;
   line-height: 0;
-  inline-size: auto;
   min-block-size: var(--actions-height, 38px);
 }
 
