@@ -53,7 +53,7 @@
 .header__title,
 .header__subtitle {
   display: inline-block;
-  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
+  font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   line-height: 1;
   letter-spacing: normal;
@@ -163,7 +163,7 @@
   right: 25px;
   z-index: 1;
   color: var(--label-text-color, #000);
-  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
+  font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   font-size: var(--footer-text-size, 14px);
   font-style: normal;
@@ -212,9 +212,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: var(--actions-gap, 0);
-  margin-inline-start: auto;
   line-height: 0;
-  inline-size: auto;
   min-block-size: var(--actions-height, 38px);
 }
 
@@ -385,7 +383,7 @@
 /* text/icon inside the button */
 
 .button__text {
-  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
+  font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   font-size: var(--footer-text-size, 14px);
   line-height: var(--footer-text-line-height, 0.9);
@@ -457,7 +455,7 @@ html:has(dialog[open]) {
 
 .save-dialog__text {
   margin: 0;
-  font-family: var(--font-accent, "PressStart2P-Regular"), monospace;
+  font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -488,9 +486,7 @@ html:has(dialog[open]) {
   .footer__save-button::before {
     transition: none;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
   .like-icon.is-liked .heart,
   .like-icon.is-liked .sparks {
     animation: none;
