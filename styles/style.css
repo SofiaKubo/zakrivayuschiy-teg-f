@@ -306,9 +306,16 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon.is-liked .heart {
+.like-icon .heart {
   transform-origin: center;
+}
+
+.like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s 1;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s 1;
 }
 
 /* === Like / Save / OK buttons === */
@@ -480,6 +487,13 @@ html:has(dialog[open]) {
   .card__like-button::before,
   .footer__save-button::before {
     transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .like-icon.is-liked .heart,
+  .like-icon.is-liked .sparks {
+    animation: none;
   }
 }
 
