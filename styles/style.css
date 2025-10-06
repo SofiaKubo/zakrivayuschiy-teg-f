@@ -117,7 +117,6 @@
 
 .card__image {
   display: block;
-  /* border-inline: 0; */
   object-fit: cover;
   object-position: top;
   inline-size: 100%;
@@ -210,12 +209,13 @@
 
 .card__actions {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: var(--actions-gap, 12px);
+  gap: var(--actions-gap, 0);
   margin-inline-start: auto;
   line-height: 0;
+  inline-size: auto;
   min-block-size: var(--actions-height, 38px);
-  inline-size: var(--actions-width, 169px);
 }
 
 /* === Icon button (heart wrapper) === */
@@ -225,13 +225,13 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 2px solid transparent;
+  border: 0;
   padding: 0;
   line-height: 0;
   background: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
-  inline-size: var(--actions-height, 38px);
+  inline-size: 39px;
   block-size: var(--actions-height, 38px);
 }
 
@@ -240,15 +240,17 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--color-accent, #000);
+  outline: 2px solid var(--color-accent, #000);
+  outline-offset: 0;
 }
 
 /* heart icon (svg) */
 
 .like-icon {
   display: block;
-  inline-size: 27px;
-  block-size: 24px;
+  transform: translate(-5.5px, -0.5px);
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .like-icon .contour {
@@ -281,6 +283,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
   padding: 0 37px;
   inline-size: var(--like-button-width, 130px);
   block-size: var(--actions-height, 38px);
@@ -295,6 +298,7 @@
   padding-inline: 20px;
   padding-block: var(--footer-button-padding-block);
   background-color: var(--color-bg, #fff);
+  transform: translate(-1.1px, -1.1px);
 }
 
 /* focus for Like/Save/OK */
