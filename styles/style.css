@@ -255,12 +255,15 @@
 
 .like-icon .contour {
   fill: var(--contour-color, #000);
+  transition: fill 0.1s linear;
 }
 .like-icon .main-body {
   fill: transparent;
+  transition: fill 0.3s linear;
 }
 .like-icon .core {
   fill: transparent;
+  transition: fill 0.3s linear 0.03s;
 }
 .like-icon .sparks {
   opacity: 0;
