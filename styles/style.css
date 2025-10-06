@@ -488,9 +488,7 @@ html:has(dialog[open]) {
   .footer__save-button::before {
     transition: none;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
   .like-icon.is-liked .heart,
   .like-icon.is-liked .sparks {
     animation: none;
