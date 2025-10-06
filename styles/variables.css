@@ -13,7 +13,7 @@
 
   /* — Typography: families & weights */
   --font-main: "Inter-Variable", "Roboto", Arial, sans-serif;
-  --font-accent: "PressStart2P-Regular", monospace;
+  --font-accent: "PressStart2P", monospace;
 
   --font-weight-text: 410;
   --font-weight-title: 715;
