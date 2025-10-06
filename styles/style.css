@@ -250,6 +250,7 @@
   display: block;
   inline-size: 39px;
   block-size: 36px;
+  transform: translate(-6px, -1px);
 }
 
 .like-icon .contour {
@@ -451,10 +452,6 @@ html:has(dialog[open]) {
     white-space: normal;
   }
 
-  .like-icon {
-    transform: translate(-6px, -1px);
-  }
-
   .footer__save-button {
     flex-direction: row;
     justify-content: center;
@@ -471,10 +468,6 @@ html:has(dialog[open]) {
 }
 
 @media (width <= 375px) {
-  .like-icon {
-    transform: translate(-6px, -1px);
-  }
-
   .footer__save-button {
     transform: translate(-1px, -1px);
   }
