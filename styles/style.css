@@ -133,7 +133,6 @@
   filter: hue-rotate(359deg) saturate(2.9) brightness(1.4) contrast(1.2)
     blur(1.1px);
 }
-
 .filter-sepia-warm {
   filter: sepia(0.1) saturate(1.3) hue-rotate(30deg) contrast(1.1);
 }
@@ -205,7 +204,7 @@
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
-/* actions row */
+/* ===== Actions row (heart + Like) ===== */
 
 .card__actions {
   display: flex;
@@ -245,7 +244,7 @@
   transform: translateX(0);
 }
 
-/* heart icon (svg) */
+/* === Heart icon (svg) === */
 
 .like-icon {
   display: block;
@@ -253,10 +252,18 @@
   block-size: 36px;
 }
 
+/* base heart geometry */
+.like-icon .heart {
+  transition: transform 120ms ease-out;
+  transform-origin: center;
+}
+
+/* micro-shift when not focused */
 .card__icon-button:not(:focus-visible) .like-icon .heart {
   transform: translateX(2px);
 }
 
+/* base fills and transitions */
 .like-icon .contour {
   fill: var(--contour-color, #000);
   transition: fill 0.1s linear;
@@ -278,6 +285,7 @@
   transition: opacity 0.2s ease;
 }
 
+/* :hover — core first, then main-body */
 .like-icon:hover .core {
   fill: var(--color-accent, #000);
   transition: fill 0.3s linear;
@@ -288,6 +296,7 @@
   transition: fill 0.3s linear 0.05s;
 }
 
+/* :active — same sequence but red */
 .like-icon:active .core {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s linear;
@@ -298,6 +307,7 @@
   transition: fill 0.3s linear 0.05s;
 }
 
+/* .is-liked — click: core → main-body → contour + scale + sparks */
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s linear;
@@ -313,21 +323,16 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon .heart {
-  transform-origin: center;
-  transition: transform 120ms ease-out;
-}
-
 .like-icon.is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s 1;
   transition: none;
+  animation: heart-scale 0.3s ease-in 0.1s 1;
 }
 
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s ease-in 0.3s 1;
 }
 
-/* === Like / Save / OK buttons === */
+/* ===== Buttons (Like / Save / OK) ===== */
 
 .card__like-button,
 .footer__save-button {
@@ -360,7 +365,6 @@
 }
 
 /* focus for Like/Save/OK */
-
 .card__like-button:focus,
 .footer__save-button:focus {
   outline: none;
@@ -372,7 +376,6 @@
 }
 
 /* slide overlay */
-
 .card__like-button::before,
 .footer__save-button::before {
   content: "";
@@ -392,7 +395,6 @@
 }
 
 /* text/icon inside the button */
-
 .button__text {
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
@@ -500,8 +502,8 @@ html:has(dialog[open]) {
 
   .like-icon.is-liked .heart,
   .like-icon.is-liked .sparks {
-    animation: none;
     transition: none;
+    animation: none;
   }
 }
 
@@ -511,7 +513,6 @@ html:has(dialog[open]) {
     line-height: 22px;
     white-space: nowrap;
   }
-
   .br-switch::before {
     content: "\00A0";
     white-space: normal;
@@ -530,7 +531,4 @@ html:has(dialog[open]) {
     inline-size: 21px;
     block-size: 21px;
   }
-}
-
-@media (width <= 375px) {
 }
