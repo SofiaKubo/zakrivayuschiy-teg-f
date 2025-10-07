@@ -329,52 +329,48 @@
 
 /* ===== Buttons (Like / Save / OK) ===== */
 
-.card__like-button,
-.footer__save-button {
-  position: relative;
-  border: var(--border-width, 2px) solid var(--border-color, #000);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  background-color: var(--color-bg, #fff);
-}
+/* === Base button === */
 
-.card__like-button {
+.button {
+  position: relative;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  border: var(--border-width, 2px) solid var(--border-color, #000);
+  overflow: hidden;
+  background-color: var(--color-bg, #fff);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.card__like-button {
   padding-inline: 37px;
   padding-block: 0;
   inline-size: var(--like-button-width, 130px);
   block-size: var(--actions-height, 38px);
-  white-space: nowrap;
 }
 
 .footer__save-button {
-  display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: var(--footer-button-gap, 8px);
   padding-inline: 20px;
   padding-block: var(--footer-button-padding-block);
-  background-color: var(--color-bg, #fff);
 }
 
 /* focus for Like/Save/OK */
-.card__like-button:focus,
-.footer__save-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.footer__save-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--color-accent, #000);
 }
 
 /* slide overlay */
-.card__like-button::before,
-.footer__save-button::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -384,10 +380,8 @@
   transform: translateX(-100%);
 }
 
-.card__like-button:hover::before,
-.footer__save-button:hover::before,
-.card__like-button:focus-visible::before,
-.footer__save-button:focus-visible::before {
+.button:hover::before,
+.button:focus-visible::before {
   transform: translateX(0);
 }
 
@@ -490,8 +484,7 @@ html:has(dialog[open]) {
 /* ===== Media ===== */
 
 @media (prefers-reduced-motion: reduce) {
-  .card__like-button::before,
-  .footer__save-button::before {
+  .button::before {
     transition: none;
   }
 
