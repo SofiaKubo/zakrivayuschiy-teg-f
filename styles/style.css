@@ -502,7 +502,6 @@ html:has(dialog[open]) {
 
   .like-icon.is-liked .heart,
   .like-icon.is-liked .sparks {
-    transition: none;
     animation: none;
   }
 }
