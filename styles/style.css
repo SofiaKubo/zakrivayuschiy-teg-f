@@ -24,7 +24,7 @@
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
-.content-section,
+.main,
 .footer {
   background: transparent;
 }
@@ -63,9 +63,9 @@
   font-size: var(--h2-size);
 }
 
-/* ===== Content section ===== */
+/* ===== Main ===== */
 
-.content-section {
+.main {
   display: flex;
   flex-direction: column;
   gap: var(--section-gap, 50px);
