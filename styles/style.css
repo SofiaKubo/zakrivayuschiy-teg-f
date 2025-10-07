@@ -98,6 +98,10 @@
   font-variation-settings: "wght" var(--font-weight-title);
 }
 
+.br-switch {
+  display: inline;
+}
+
 /* image */
 .card__image-wrapper {
   position: relative;
