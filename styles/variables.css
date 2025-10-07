@@ -53,7 +53,7 @@
 
   /* — Card: actions row (heart + Like button) */
   --actions-height: 38px;
-  --actions-gap: 0px;
+  --actions-gap: 8px;
 
   --like-button-width: 130px;
 

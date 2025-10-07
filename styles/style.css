@@ -211,7 +211,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: var(--actions-gap, 0);
+  gap: var(--actions-gap, 8px);
   line-height: 0;
   min-block-size: var(--actions-height, 38px);
 }
@@ -227,7 +227,6 @@
   padding: 0;
   line-height: 0;
   background: transparent;
-  transition: border-color 0.3s ease;
   cursor: pointer;
   inline-size: 39px;
   block-size: var(--actions-height, 38px);
@@ -239,30 +238,40 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--color-accent, #000);
-  outline-offset: 0;
+  outline-offset: -2px;
+}
+
+.card__icon-button:focus-visible .like-icon .heart {
+  transform: translateX(0);
 }
 
 /* heart icon (svg) */
 
 .like-icon {
   display: block;
-  transform: translate(-6px, -1px);
   inline-size: 39px;
   block-size: 36px;
+}
+
+.card__icon-button:not(:focus-visible) .like-icon .heart {
+  transform: translateX(2px);
 }
 
 .like-icon .contour {
   fill: var(--contour-color, #000);
   transition: fill 0.1s linear;
 }
+
 .like-icon .main-body {
   fill: transparent;
   transition: fill 0.3s linear;
 }
+
 .like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear 0.03s;
 }
+
 .like-icon .sparks {
   opacity: 0;
   fill: var(--animation-fill-color, #ff0000);
@@ -306,10 +315,12 @@
 
 .like-icon .heart {
   transform-origin: center;
+  transition: transform 120ms ease-out;
 }
 
 .like-icon.is-liked .heart {
   animation: heart-scale 0.3s ease-in 0.1s 1;
+  transition: none;
 }
 
 .like-icon.is-liked .sparks {
@@ -490,6 +501,7 @@ html:has(dialog[open]) {
   .like-icon.is-liked .heart,
   .like-icon.is-liked .sparks {
     animation: none;
+    transition: none;
   }
 }
 
@@ -521,7 +533,4 @@ html:has(dialog[open]) {
 }
 
 @media (width <= 375px) {
-  .footer__save-button {
-    transform: translate(-1px, -1px);
-  }
 }
