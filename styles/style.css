@@ -55,7 +55,6 @@
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   line-height: 1;
-  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
 }
@@ -95,7 +94,6 @@
   font-family: var(--font-main, "Inter-Variable"), sans-serif;
   font-weight: var(--font-weight-title, 715);
   font-size: var(--title-size, 18px);
-  font-style: normal;
   line-height: var(--title-line-height, 22px);
   letter-spacing: 0;
   font-variation-settings: "wght" var(--font-weight-title);
@@ -168,9 +166,7 @@
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
   font-size: var(--footer-text-size, 14px);
-  font-style: normal;
   line-height: 1;
-  letter-spacing: normal;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--label-stroke-color, rgb(255 255 255 / 0.5)),
     0 1px var(--label-stroke-color, rgb(255 255 255 / 0.5)),
@@ -207,7 +203,6 @@
   font-weight: var(--font-weight-text, 410);
   font-size: var(--text-size, 18px);
   line-height: var(--text-line-height, 21px);
-  letter-spacing: normal;
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
