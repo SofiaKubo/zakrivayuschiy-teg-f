@@ -336,6 +336,7 @@
   overflow: hidden;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
+  background-color: var(--color-bg, #fff);
 }
 
 .card__like-button {
