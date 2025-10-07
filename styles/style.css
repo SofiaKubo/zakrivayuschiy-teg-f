@@ -24,7 +24,6 @@
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
-.main,
 .content-section,
 .footer {
   background: transparent;
@@ -111,9 +110,14 @@
 .card__image-wrapper {
   position: relative;
   border-block: var(--border-width, 2px) solid var(--border-color, #000);
-  overflow: hidden;
   overflow: clip;
   isolation: isolate;
+}
+
+@supports not (overflow: clip) {
+  .card__image-wrapper {
+    overflow: hidden;
+  }
 }
 
 .card__image {
