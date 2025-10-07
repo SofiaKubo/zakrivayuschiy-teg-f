@@ -158,10 +158,10 @@
 /* corner label */
 .card__label {
   position: absolute;
-  opacity: 0.6;
   top: 25px;
   right: 25px;
   z-index: 1;
+  opacity: 0.6;
   color: var(--label-text-color, #000);
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
@@ -224,10 +224,11 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  border: 0;
+  border: 2px solid transparent;
   padding: 0;
   line-height: 0;
   background: transparent;
+  transition: border-color 0.3s ease;
   cursor: pointer;
   inline-size: 39px;
   block-size: var(--actions-height, 38px);
@@ -238,8 +239,7 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--color-accent, #000);
-  outline-offset: -2px;
+  border-color: var(--color-accent, #000);
 }
 
 .card__icon-button:focus-visible .like-icon .heart {
