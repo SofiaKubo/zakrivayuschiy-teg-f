@@ -98,11 +98,6 @@
   font-variation-settings: "wght" var(--font-weight-title);
 }
 
-.br-switch::before {
-  content: "\A";
-  white-space: pre;
-}
-
 /* image */
 .card__image-wrapper {
   position: relative;
@@ -506,9 +501,8 @@ html:has(dialog[open]) {
     margin-block: 97px;
   }
 
-  .br-switch::before {
-    content: "\00A0";
-    white-space: normal;
+  .br-switch {
+    display: none;
   }
 
   .footer__save-button {
