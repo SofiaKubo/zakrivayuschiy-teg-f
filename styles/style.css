@@ -158,6 +158,7 @@
 /* corner label */
 .card__label {
   position: absolute;
+  opacity: 0.6;
   top: 25px;
   right: 25px;
   z-index: 1;
@@ -255,13 +256,7 @@
 
 /* base heart geometry */
 .like-icon .heart {
-  transition: transform 120ms ease-out;
   transform-origin: center;
-}
-
-/* micro-shift when not focused */
-.card__icon-button:not(:focus-visible) .like-icon .heart {
-  transform: translateX(2px);
 }
 
 /* base fills and transitions */
