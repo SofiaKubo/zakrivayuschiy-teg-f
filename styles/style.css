@@ -24,8 +24,7 @@
   font-variation-settings: "wght" var(--font-weight-text);
 }
 
-.main,
-.save-section {
+.main {
   background: transparent;
 }
 
@@ -344,6 +343,8 @@
 .save-button {
   flex-direction: column;
   gap: var(--save-button-gap, 8px);
+  align-self: center;
+  margin-block-end: var(--section-margin-block);
   padding-inline: 20px;
   padding-block: var(--save-button-padding-block);
 }
@@ -393,16 +394,6 @@
   fill: currentColor;
   inline-size: 29px;
   block-size: 28px;
-}
-
-/* ===== Save section (container for the Save button) ===== */
-
-.save-section {
-  display: flex;
-  justify-content: center;
-  margin-inline: auto;
-  padding-block-end: var(--section-margin-block);
-  inline-size: var(--content-width);
 }
 
 /* ===== Dialog ===== */
