@@ -57,7 +57,7 @@
 
   --like-button-width: 130px;
 
-  /* — Save-section */
+  /* — Save section */
   --save-button-gap: 8px;
   --save-button-padding-block: clamp(1.063rem, 0.282vw + 0.996rem, 1.25rem);
   --save-text-size: 14px;

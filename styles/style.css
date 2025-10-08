@@ -379,8 +379,7 @@
   transform: translateX(-100%);
 }
 
-.button:hover::before,
-.button:focus-visible::before {
+.button:hover::before {
   transform: translateX(0);
 }
 
