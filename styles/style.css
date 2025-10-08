@@ -25,7 +25,7 @@
 }
 
 .main,
-.footer {
+.save-section {
   background: transparent;
 }
 
@@ -164,7 +164,7 @@
   color: var(--label-text-color, #000);
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
-  font-size: var(--footer-text-size, 14px);
+  font-size: var(--save-text-size, 14px);
   line-height: 1;
   text-transform: uppercase;
   text-shadow: -1px 0 var(--label-stroke-color, rgb(255 255 255 / 0.5)),
@@ -352,11 +352,11 @@
   block-size: var(--actions-height, 38px);
 }
 
-.footer__save-button {
+.save-button {
   flex-direction: column;
-  gap: var(--footer-button-gap, 8px);
+  gap: var(--save-button-gap, 8px);
   padding-inline: 20px;
-  padding-block: var(--footer-button-padding-block);
+  padding-block: var(--save-button-padding-block);
 }
 
 /* focus for Like/Save/OK */
@@ -388,28 +388,28 @@
 .button__text {
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
-  font-size: var(--footer-text-size, 14px);
-  line-height: var(--footer-text-line-height, 0.9);
+  font-size: var(--saver-text-size, 14px);
+  line-height: var(--save-text-line-height, 0.9);
 }
 
 .button__text,
-.footer__icon {
+.save-button__icon {
   position: relative;
   z-index: 1;
   color: var(--color-bg, #fff);
   mix-blend-mode: difference;
 }
 
-.footer__icon {
+.save-button__icon {
   display: block;
   fill: currentColor;
   inline-size: 29px;
   block-size: 28px;
 }
 
-/* ===== Footer ===== */
+/* ===== Save section (container for the Save button) ===== */
 
-.footer {
+.save-section {
   display: flex;
   justify-content: center;
   margin-inline: auto;
@@ -502,14 +502,14 @@ html:has(dialog[open]) {
     display: none;
   }
 
-  .footer__save-button {
+  .save-button {
     flex-direction: row;
     padding-inline: 19px;
     white-space: nowrap;
     block-size: 55px;
   }
 
-  .footer__icon {
+  .save-button__icon {
     inline-size: 21px;
     block-size: 21px;
   }

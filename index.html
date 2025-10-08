@@ -590,21 +590,21 @@
           </div>
         </div>
       </article>
+      <div class="save-section">
+        <button
+          type="button"
+          class="button save-button"
+          aria-label="Сохранить на память"
+          aria-controls="save-dialog"
+          onclick="window['save-dialog'].showModal();"
+        >
+          <svg class="save-button__icon" viewBox="0 0 29 28" aria-hidden="true">
+            <use href="./svg/floppy-sprite.svg#floppy_symbol"></use>
+          </svg>
+          <span class="button__text">Сохранить&nbsp;на&nbsp;память</span>
+        </button>
+      </div>
     </main>
-    <footer class="footer">
-      <button
-        type="button"
-        class="button footer__save-button"
-        aria-label="Сохранить на память"
-        aria-controls="save-dialog"
-        onclick="window['save-dialog'].showModal();"
-      >
-        <svg class="footer__icon" viewBox="0 0 29 28" aria-hidden="true">
-          <use href="./svg/floppy-sprite.svg#floppy_symbol"></use>
-        </svg>
-        <span class="button__text">Сохранить&nbsp;на&nbsp;память</span>
-      </button>
-    </footer>
     <dialog
       id="save-dialog"
       class="save-dialog"
