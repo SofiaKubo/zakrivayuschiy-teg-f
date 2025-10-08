@@ -71,7 +71,6 @@
   gap: var(--section-gap, 50px);
   margin-inline: auto;
   padding-inline: 0;
-  padding-block: 0 50px;
   inline-size: var(--content-width);
 }
 
@@ -98,16 +97,17 @@
   font-variation-settings: "wght" var(--font-weight-title);
 }
 
-.br-switch {
-  display: inline;
-}
-
 /* image */
 .card__image-wrapper {
   position: relative;
+  margin: 0;
   border-block: var(--border-width, 2px) solid var(--border-color, #000);
   overflow: clip;
   isolation: isolate;
+}
+
+.card__image-wrapper picture {
+  display: block;
 }
 
 @supports not (overflow: clip) {
@@ -133,6 +133,7 @@
   filter: hue-rotate(359deg) saturate(2.9) brightness(1.4) contrast(1.2)
     blur(1.1px);
 }
+
 .filter-sepia-warm {
   filter: sepia(0.1) saturate(1.3) hue-rotate(30deg) contrast(1.1);
 }
@@ -192,11 +193,6 @@
   padding: var(--card-padding);
 }
 
-/* rely on gap only, no browser margins inside card body */
-.card__content > * {
-  margin: 0;
-}
-
 .card__text {
   font-family: var(--font-main, "Inter-Variable"), sans-serif;
   font-weight: var(--font-weight-text, 410);
@@ -219,12 +215,11 @@
 /* === Icon button (heart wrapper) === */
 
 .card__icon-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-grid;
+  place-items: center;
+  box-sizing: border-box;
   border: 2px solid transparent;
   padding: 0;
-  line-height: 0;
   background: transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
@@ -240,20 +235,14 @@
   border-color: var(--color-accent, #000);
 }
 
-.card__icon-button:focus-visible .like-icon .heart {
-  transform: translateX(0);
-}
-
 /* === Heart icon (svg) === */
 
 .like-icon {
   display: block;
   block-size: var(--like-icon-height, 36px);
   inline-size: var(--like-icon-width, 39px);
-  box-sizing: border-box;
 }
 
-/* base heart geometry */
 .like-icon .heart {
   transform-origin: center;
 }
@@ -495,10 +484,6 @@ html:has(dialog[open]) {
 @media (width > 375px) {
   .header {
     margin-block: 97px;
-  }
-
-  .br-switch {
-    display: none;
   }
 
   .save-button {

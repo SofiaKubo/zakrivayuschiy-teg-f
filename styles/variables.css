@@ -53,9 +53,12 @@
 
   /* — Card: actions row (heart + Like button) */
   --actions-height: 38px;
-  --actions-gap: 8px;
+  --actions-gap: 12px;
 
   --like-button-width: 130px;
+
+  --like-icon-width: 39px;
+  --like-icon-height: 36px;
 
   /* — Save section */
   --save-button-gap: 8px;
