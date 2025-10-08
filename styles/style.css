@@ -354,7 +354,6 @@
 
 .footer__save-button {
   flex-direction: column;
-  align-items: center;
   gap: var(--footer-button-gap, 8px);
   padding-inline: 20px;
   padding-block: var(--footer-button-padding-block);
@@ -505,8 +504,6 @@ html:has(dialog[open]) {
 
   .footer__save-button {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding-inline: 19px;
     white-space: nowrap;
     block-size: 55px;
