@@ -376,7 +376,7 @@
 .button__text {
   font-family: var(--font-accent, "PressStart2P"), monospace;
   font-weight: 400;
-  font-size: var(--saver-text-size, 14px);
+  font-size: var(--save-text-size, 14px);
   line-height: var(--save-text-line-height, 0.9);
 }
 
